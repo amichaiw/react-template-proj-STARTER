@@ -1,10 +1,15 @@
+
+
 /* Setup */
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
+@import './cmps/AppHeader.css';
+@import './cmps/BookList.css';
+@import './cmps/BookPreview.css';
 /* Vars */
 :root {
-	--clr1: rgb(96, 107, 91);
+	--clr1: rgb(81, 121, 135);
 	--clr2: rgb(120, 99, 110);
 
 	--clr1bg: rgb(153, 166, 149);
@@ -174,37 +179,13 @@ input:focus {
 
 /* Components */
 
+
+
 .home {
 	font-size: 1em;
 }
 
-.app-header {
-	background-color: var(--clr1);
-	color: var(--clr2bg-light);
 
-}
-
-.header-container {
-	display: flex;
-	align-items: center;
-
-}
-
-.header-container h1 {
-	flex-grow: 1;
-}
-
-.app-nav {
-	display: flex;
-	gap: 15px;
-}
-
-
-a.active {
-	color: rgb(241, 212, 241);
-	font-weight: 600;
-	text-decoration: underline;
-}
 
 
 @media (max-width: 720px) {

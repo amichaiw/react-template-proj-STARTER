@@ -1,0 +1,49 @@
+.app-header {
+	background-color: var(--clr1);
+	color: var(--clr2bg-light);
+}
+
+.header-container {
+	display: flex;
+	align-items: center;
+}
+
+.header-container h1 {
+	flex-grow: 1;
+}
+
+.app-nav {
+	display: flex;
+	gap: 32px;
+	padding: 0 12px;
+}
+
+a.active {
+	color: #f4845f;
+	background: #4b93aa;
+	border-radius: 18px;
+	padding: 6px 18px;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 1px 6px rgba(244,132,95,0.12);
+	transition: background 0.2s, color 0.2s;
+}
+
+.app-nav a {
+	color: #ffffff;
+	font-size: 1.08em;
+	padding: 6px 18px;
+	border-radius: 18px;
+	text-decoration: none;
+	transition: background 0.2s, color 0.2s;
+}
+.app-nav a:hover {
+	background: #f7b267;
+	color: #f4845f;
+}
+
+@media (max-width: 720px) {
+	.app-header {
+		color: var(--clr2bg-light);
+	}
+}
