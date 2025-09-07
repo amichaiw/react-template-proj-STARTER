@@ -10,6 +10,7 @@ export function BookList({books}) {
             {books.map(book =>
                 <li key={book.id}>
                     <BookPreview book={book} />
+                    <button><Link to={`/book/${book.id}`}>Details</Link></button>
                 </li>
             )}
         </ul>)

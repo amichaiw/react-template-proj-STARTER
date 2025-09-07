@@ -35,6 +35,8 @@ function query(filterBy = {}) {
 
 function get(bookId) {
     return storageService.get(BOOK_KEY, bookId)
+    .then(book=>_setNextPrevBookId(book))
+    
 }
 
 function remove(bookId) {
@@ -59,6 +61,19 @@ function getFilterFromSrcParams(srcParams) {
 }
 
 
+
+function _setNextPrevBookId(book) {
+    return query().then((books) => {
+        const bookIdx = books.findIndex((currBook) => currBook.id === book.id)
+        const nextBook = books[bookIdx + 1] ? books[bookIdx + 1] : books[0]
+        const prevBook = books[bookIdx - 1] ? books[bookIdx - 1] : books[books.length - 1]
+        book.nextBookId = nextBook.id
+        book.prevBookId = prevBook.id
+        return book
+    })
+}
+
+
 function _createBooks() {
 const ctgs = ['Love', 'Fiction', 'Poetry', 'Computers', 'Religion']
 const books = utilService.loadFromStorage(BOOK_KEY) || []
@@ -75,7 +90,8 @@ publishedDate: utilService.getRandomIntInclusive(1950, 2024),
 description: utilService.makeLorem(20),
 pageCount: utilService.getRandomIntInclusive(20, 600),
 categories: [ctgs[utilService.getRandomIntInclusive(0, ctgs.length - 1)]],
-thumbnail: `http://coding-academy.org/books-photos/${i+1}.jpg`,
+thumbnail: `/assets/img/booksImages/${i + 1}.jpg`,
+// thumbnail: `http://coding-academy.org/books-photos/${i+1}.jpg`,
 language: "en",
 listPrice: {
 amount: utilService.getRandomIntInclusive(80, 500),
