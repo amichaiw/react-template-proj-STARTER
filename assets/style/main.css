@@ -1,8 +1,10 @@
 
 
 /* Setup */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 @import './cmps/AppHeader.css';
 @import './cmps/BookList.css';
@@ -12,7 +14,7 @@
 	--clr1: rgb(81, 121, 135);
 	--clr2: rgb(120, 99, 110);
 
-	--clr1bg: rgb(153, 166, 149);
+	--clr1bg: rgba(83, 147, 165, 0.511);
 	--clr1bg-light: rgb(205, 221, 200);
 	--clr2bg: rgb(233, 206, 221);
 	--clr2bg-light: rgb(253, 236, 246);
@@ -35,13 +37,22 @@ body {
 }
 
 h1,
-h2,
-h3,
+h2{
+	margin: .5em 0 .5em;
+	font-family: 'Nunito', sans-serif;	
+}
+
+
+h3{
+	margin: .5em 0 .5em;
+	font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
 h4,
 h5,
 h6 {
 	margin: .5em 0 .5em;
-	font-family: 'Edu VIC WA NT Beginner', cursive;
+	font-family: 'Open Sans', cursive;
 }
 
 p {
