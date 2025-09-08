@@ -47,7 +47,8 @@ h2{
 
 h3{
 	margin: .5em 0 .5em;
-	font-family: 'Edu VIC WA NT Beginner', cursive;
+	/* font-family: 'Edu VIC WA NT Beginner', cursive; */
+	font-family: 'Open Sans', cursive;
 }
 
 h4,
@@ -200,9 +201,10 @@ input:focus {
 
 
 
-
 @media (max-width: 720px) {
 	.app-header {
 		color: var(--clr2bg-light);
 	}
 }
+
+

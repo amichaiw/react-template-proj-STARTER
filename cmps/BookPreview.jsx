@@ -7,6 +7,7 @@ export function BookPreview({book}) {
             {/* <h4>{book.subtitle}</h4> */}
             <img src={book.thumbnail} alt={book.title} />
             <h4>{book.listPrice.amount} {book.listPrice.currencyCode}</h4>
+            {book.listPrice.isOnSale && <img className="sale-badge" src="assets\img\sign.png" alt="sale" />}
         </article>
     )
 }

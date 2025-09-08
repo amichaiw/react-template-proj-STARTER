@@ -10,7 +10,7 @@ export const bookService = {
     get,
     remove,
     save,
-    getFilterFromSrcParams
+    getFilterFromSrcParams,
 }
 
 function query(filterBy = {}) {
