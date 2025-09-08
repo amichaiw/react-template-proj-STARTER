@@ -6,6 +6,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
+@import './layout/layout.css';
 @import './cmps/AppHeader.css';
 @import './cmps/BookList.css';
 @import './cmps/BookPreview.css';
@@ -167,7 +168,7 @@ input:focus {
 }
 
 /* Layout */
-.main-layout {
+/* .main-layout {
 	display: grid;
 	grid-template-columns: 1.6rem 1fr 1.6rem;
 }
@@ -184,7 +185,7 @@ input:focus {
 	max-width: 800px;
 	padding: 1em;
 	margin: auto;
-}
+} */
 
 
 

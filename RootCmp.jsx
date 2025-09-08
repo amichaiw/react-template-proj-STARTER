@@ -15,7 +15,7 @@ const { Routes, Route, Navigate } = ReactRouterDOM
 export function RootCmp() {
     return (
         <Router>
-            <section className="app">
+            {/* <section className="app"> */}
                 <AppHeader />
                 <main className="main-layout">
                     <Routes>
@@ -27,7 +27,7 @@ export function RootCmp() {
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                 </main>
-            </section>
+            {/* </section> */}
         </Router>
     )
 }

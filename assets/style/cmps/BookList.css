@@ -11,7 +11,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--clr1bg);
+    /* background-color: var(--clr1bg); */
+    background:linear-gradient(135deg, var(--clr1bg), #f0f0f0);
     padding: 0.2em;
     border-radius: 0.4em;
 }

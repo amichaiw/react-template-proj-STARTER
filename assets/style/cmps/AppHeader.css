@@ -1,11 +1,12 @@
 .app-header {
-	background-color: var(--clr1);
+	background:linear-gradient(135deg, #1e1d65, #5464da);
 	color: var(--clr2bg-light);
 }
 
 .header-container {
 	display: flex;
 	align-items: center;
+	padding: 0.5em 3em;
 }
 
 .header-container h1 {
@@ -19,7 +20,7 @@
 }
 
 a.active {
-	color: #f4845f;
+	color: #5ff493;
 	background: #4b93aa;
 	border-radius: 18px;
 	padding: 6px 18px;
@@ -38,8 +39,8 @@ a.active {
 	transition: background 0.2s, color 0.2s;
 }
 .app-nav a:hover {
-	background: #f7b267;
-	color: #f4845f;
+	background: #8bc681;
+	color: #0f7e15;
 }
 
 @media (max-width: 720px) {
