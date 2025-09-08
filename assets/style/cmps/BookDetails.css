@@ -1,0 +1,30 @@
+.book-details{
+   max-width: 800px;
+   margin: auto;
+   text-align: center;
+   background:linear-gradient(135deg, var(--clr1bg), #f0f0f0);
+}
+
+.book-details img{
+   max-width: 300px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   margin: 1em 0;
+}
+
+.book-details h1{
+   color: rgb(62, 61, 61);
+   margin-bottom: 0.5em;
+   font-size: 2em;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+
+.book-details p{
+   line-height: 1.6;
+   color: var(--clr3);
+   font-size: 1.3em;
+   padding: 0 2em;
+   font-family: Arial, Helvetica, sans-serif;
+}
+

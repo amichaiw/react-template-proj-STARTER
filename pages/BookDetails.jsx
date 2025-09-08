@@ -22,7 +22,7 @@ export function BookDetails() {
 
       if (!book) return <div>Loading...</div>
       return(
-         <section>
+         <section className="book-details">
             <h1>{book.title}</h1>
             <p>{book.description}</p>
             <img src={book.thumbnail} alt="img" />
