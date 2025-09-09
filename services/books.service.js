@@ -90,7 +90,7 @@ publishedDate: utilService.getRandomIntInclusive(1950, 2024),
 description: utilService.makeLorem(20),
 pageCount: utilService.getRandomIntInclusive(20, 600),
 categories: [ctgs[utilService.getRandomIntInclusive(0, ctgs.length - 1)]],
-thumbnail: `/assets/img/booksImages/${i + 1}.jpg`,
+thumbnail: `${process.env.PUBLIC_URL}/assets/img/booksImages/${i + 1}.jpg`,
 
 // thumbnail: `http://coding-academy.org/books-photos/${i+1}.jpg`,
 language: "en",
