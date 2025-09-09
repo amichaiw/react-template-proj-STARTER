@@ -33,15 +33,18 @@ export function BookFilter({defaultFilter, onSetFilter}) {
 
     return( 
       <section className="book-filter">
-         <h2>Filter  books</h2>
+         <h2>Filter books</h2>
          <form >
-            <label htmlFor="title">By title:</label>
+            <ul>
+            <label htmlFor="title">title:</label>
             <input onChange={handleChange} type="text" id='title' name='title' value={filterByToEdit.title} />
-
-            <label htmlFor="minPrice">By min price:</label>
+            </ul>
+            <ul>
+            <label htmlFor="minPrice">min price:</label>
             <input onChange={handleChange} type="number" id="minPrice" name="minPrice" value={filterByToEdit.minPrice} />
-            
-            <label htmlFor="category">By category:</label>
+            </ul>
+            <ul>
+            <label htmlFor="category">category:</label>
             <select onChange={handleChange} id="category" name="category" value={filterByToEdit.category}>
                <option value="">All</option>
                <option value='Love'>Love</option>
@@ -50,10 +53,11 @@ export function BookFilter({defaultFilter, onSetFilter}) {
                <option value='Computers'>Computers</option>
                <option value='Religion'>Religion</option>
             </select>
-
+            </ul>
+            <ul>
             <label htmlFor="isOnSale">On Sale:</label>
             <input onChange={handleChange} type="checkbox" id="isOnSale" name="isOnSale" checked={filterByToEdit.isOnSale} />
-
+            </ul>
          </form>
 
       </section>

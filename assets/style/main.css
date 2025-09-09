@@ -11,6 +11,7 @@
 @import './cmps/BookList.css';
 @import './cmps/BookPreview.css';
 @import './cmps/BookDetails.css';
+@import './cmps/BookFilter.css';
 /* Vars */
 :root {
 	--clr1: rgb(81, 121, 135);

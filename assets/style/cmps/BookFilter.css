@@ -1,0 +1,44 @@
+.book-filter {
+    max-width: 600px;
+    margin: 1em auto;
+    padding: 1em;
+    border: 1px solid var(--clr2);
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--clr1bg), #f9f9f9);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.book-filter h2 {
+    text-align: center;
+    color: var(--clr2);
+    margin-bottom: 1em;
+}
+.book-filter form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    justify-content: start;
+    align-items: start;
+}
+.book-filter ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.book-filter label {
+    font-weight: bold;
+    color: var(--clr2);
+}
+
+.book-filter input,
+.book-filter select {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
