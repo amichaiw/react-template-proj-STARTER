@@ -18,16 +18,23 @@ function query(filterBy = {}) {
         .then(books => {
             if (filterBy.title) {
                 const regExp = new RegExp(filterBy.title, 'i')
-                books = books.filter(book => regExp.test(book.vendor))
+                books = books.filter(book => regExp.test(book.title))
             }
-
             if (filterBy.id) {
                 const regExp = new RegExp(filterBy.id, 'i')
-                books = books.filter(book => regExp.test(book.vendor))
+                books = books.filter(book => regExp.test(book.id))
             }
             if (filterBy.minPrice) {
                 books = books.filter(book => book.listPrice.amount >= filterBy.minPrice)
             }
+            if (filterBy.category) {
+                const regExp = new RegExp(filterBy.category, 'i')
+                books = books.filter(book => regExp.test(book.categories))
+            }
+            if (filterBy.isOnSale) {
+                books = books.filter(book => book.listPrice.isOnSale)
+            }
+            
 
             return books
         })
@@ -52,10 +59,15 @@ function getFilterFromSrcParams(srcParams) {
     const title = srcParams.get('title') || ''
     const id = srcParams.get('id') || ''
     const minPrice = srcParams.get('minPrice') || ''
+    const category = srcParams.get('category') || ''
+    const isOnSale = srcParams.get('isOnSale') === 'true' ? true : false || ''
+
     return {
         title,
         id,
-        minPrice
+        minPrice,
+        category,
+        isOnSale
     }
 
 }

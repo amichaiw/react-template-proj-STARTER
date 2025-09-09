@@ -23,7 +23,7 @@ export function BookIndex() {
         bookService.query(filterBy)
             .then(books => {
                 setBooks(books)
-                console.log('books from service:', books)
+                // console.log('books from service:', books)
             })
             .catch(err => {
                 console.log('Had issues in book service', err)
