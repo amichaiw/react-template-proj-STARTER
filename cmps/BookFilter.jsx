@@ -1,20 +1,17 @@
-const { useState, useEffect } = React
+import { utilService } from '../services/util.service.js'
+
+const { useState, useEffect, useRef } = React
+
 
 
 export function BookFilter({defaultFilter, onSetFilter}) {
 
    const [filterByToEdit, setFilterByToEdit] = useState(defaultFilter)
+   const debouncedOnSetFilter = useRef(utilService.debounce(onSetFilter, 500)).current
 
    useEffect(() => {
-      console.log('filterByToEdit:', filterByToEdit);
-      console.log('defaultFilter:', defaultFilter);
-      console.log('onSetFilter:', onSetFilter);
-      onSetFilter(filterByToEdit)
+      debouncedOnSetFilter(filterByToEdit)
    }, [filterByToEdit])
-
-
-
-
 
 
    function handleChange({ target }) {
@@ -59,10 +56,6 @@ export function BookFilter({defaultFilter, onSetFilter}) {
             <input onChange={handleChange} type="checkbox" id="isOnSale" name="isOnSale" checked={filterByToEdit.isOnSale} />
             </ul>
          </form>
-
       </section>
     )
-
-
-
 }
