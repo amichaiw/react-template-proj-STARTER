@@ -1,4 +1,5 @@
 import { bookService } from "../services/books.service.js";
+import { LongTxt } from "../cmps/LongTxt.jsx";
 
 
 const { useEffect, useState } = React
@@ -36,19 +37,20 @@ export function BookDetails() {
       if (!book) return <div>Loading...</div>
       return(
          <section className="book-details">
-            <h1>{book.title}</h1>
-            <h3><i className="fa-solid fa-feather"></i> {book.authors}</h3>
-            <h3>Categories: {book.categories}</h3>
-            <p>{book.description}</p>
-            <img src={book.thumbnail} alt="img" />
-            <h3> {kindOfReading()} </h3>
-            <h3 className={`book-details-${priceHighLow()}`}>Price: {book.listPrice.amount} {book.listPrice.currencyCode}</h3>
             <section>
                <Link to={`/book/${book.prevBookId}`}>
                <button> <i className="fa-solid fa-arrow-left"></i></button>
                </Link>
                <button> <Link to={`/book/${book.nextBookId}`}><i className="fa-solid fa-arrow-right"></i></Link></button>
             </section>
+            <h1>{book.title}</h1>
+            <h3><i className="fa-solid fa-feather"></i> {book.authors}</h3>
+            <h3><i className="fa-solid fa-book"></i> {book.categories}</h3>
+            <img src={book.thumbnail} alt="img" />
+            <h3> {kindOfReading()} </h3>
+            <h3 className={`book-details-${priceHighLow()}`}>Price: {book.listPrice.amount} {book.listPrice.currencyCode}</h3>
+            <p><LongTxt>{book.description}</LongTxt></p>
+            
          </section>
       )
 
